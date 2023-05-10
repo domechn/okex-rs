@@ -27,6 +27,7 @@ impl BalanceRequest {
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct BalanceDataDetail {
     pub eq: String,
+    pub ccy: String,
 }
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
