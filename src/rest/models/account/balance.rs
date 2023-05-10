@@ -23,10 +23,15 @@ impl BalanceRequest {
         }
     }
 }
+        
+#[derive(Clone, Debug, Deserialize, Serialize)]
+pub struct BalanceDataDetail {
+    pub eq: String,
+}
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct BalanceResponse {
-    pub imr: String,
+    pub details: Vec<BalanceDataDetail>,
 }
 
 impl Request for BalanceRequest {
