@@ -31,9 +31,7 @@ pub struct SavingsBalanceDataDetail {
 }
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
-pub struct SavingsBalanceResponse {
-    pub details: Vec<SavingsBalanceDataDetail>,
-}
+pub struct SavingsBalanceResponse(Vec<SavingsBalanceDataDetail>);
 
 impl Request for SavingsBalanceRequest {
     const METHOD: Method = Method::GET;
