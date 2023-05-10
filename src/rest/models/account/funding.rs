@@ -35,5 +35,5 @@ impl Request for FundingBalanceRequest {
     const SIGNED: bool = true;
     const ENDPOINT: &'static str = "/api/v5/asset/balances";
     const HAS_PAYLOAD: bool = false;
-    type Response = [FundingBalanceResponse; 1];
+    type Response = Vec<FundingBalanceResponse>;
 }

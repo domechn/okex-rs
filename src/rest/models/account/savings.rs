@@ -35,5 +35,5 @@ impl Request for SavingsBalanceRequest {
     const SIGNED: bool = true;
     const ENDPOINT: &'static str = "/api/v5/finance/savings/balance";
     const HAS_PAYLOAD: bool = false;
-    type Response = [SavingsBalanceResponse; 1];
+    type Response = Vec<SavingsBalanceResponse>;
 }
