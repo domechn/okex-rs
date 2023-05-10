@@ -23,15 +23,12 @@ impl SavingsBalanceRequest {
         }
     }
 }
-        
-#[derive(Clone, Debug, Deserialize, Serialize)]
-pub struct SavingsBalanceDataDetail {
-    pub eq: String,
-    pub ccy: String,
-}
 
 #[derive(Clone, Debug, Deserialize, Serialize)]
-pub struct SavingsBalanceResponse(Vec<SavingsBalanceDataDetail>);
+pub struct SavingsBalanceResponse {
+    pub ccy: String,
+    pub amt: String,
+}
 
 impl Request for SavingsBalanceRequest {
     const METHOD: Method = Method::GET;
