@@ -5,23 +5,23 @@ use std::env::var;
 lazy_static! {
     pub static ref PUB_WS_URL: &'static str = {
         if var("OKEX_AWS").unwrap_or_else(|_| "0".to_string()) == "0" {
-            "wss://ws.okex.com:8443/ws/v5/public"
+            "wss://ws.okx.com:8443/ws/v5/public"
         } else {
-            "wss://wsaws.okex.com:8443/ws/v5/public"
+            "wss://wsaws.okx.com:8443/ws/v5/public"
         }
     };
     pub static ref PRIV_WS_URL: &'static str = {
         if var("OKEX_AWS").unwrap_or_else(|_| "0".to_string()) == "0" {
-            "wss://ws.okex.com:8443/ws/v5/private"
+            "wss://ws.okx.com:8443/ws/v5/private"
         } else {
-            "wss://wsaws.okex.com:8443/ws/v5/private"
+            "wss://wsaws.okx.com:8443/ws/v5/private"
         }
     };
     pub static ref REST_URL: &'static str = {
         if var("OKEX_AWS").unwrap_or_else(|_| "0".to_string()) == "0" {
-            "https://www.okex.com"
+            "https://www.okx.com"
         } else {
-            "https://aws.okex.com"
+            "https://aws.okx.com"
         }
     };
     pub static ref IS_AWS: bool = var("OKEX_AWS").unwrap_or_else(|_| "0".to_string()) != "0";
